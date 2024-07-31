@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP-UP PAGE</title>
+</head>
+<body>
+    <script>
+        function checkLocation() {
+            const location = prompt("Please enter your location: ");
+
+            const normalizedLocation = location ? location.toLowerCase() : "";
+
+            if (normalizedLocation === "punjab" || normalizedLocation === "haryana" || normalizedLocation === "chandigarh") {
+                const username = prompt("Enter your username:");
+                const password = prompt("Enter your password:");
+
+                if (username === "armanpreet" && password === "password1234") {
+                    alert("Login successful! Redirecting to the map.");
+                    window.location.href = "https://maps.app.goo.gl/9YqnRVYeJq2SXdwF7";
+                } else {
+                    alert("Wrong credentials.");
+                }
+            } else {
+                alert("Access denied.");
+            }
+        }
+        checkLocation();
+    </script>
+</body>
+</html>
